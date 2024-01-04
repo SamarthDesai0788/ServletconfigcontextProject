@@ -1,0 +1,38 @@
+<web-app>
+  <servlet>
+  	<servlet-name>ServletConfiguration</servlet-name>
+  	<display-name>ServletConfiguration</display-name>
+  	<description></description>
+  	<servlet-class>com.servletconfig.ServletConfiguration</servlet-class>
+  	<init-param>
+  	<param-name>drivers</param-name>
+  	<param-value>com.jdbc.cj.mysql.Driver</param-value>
+  	
+  	</init-param>
+  </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>WelcomeServlet</display-name>
+  	<servlet-name>WelcomeServlet</servlet-name>
+  	<servlet-class>com.servletconfig.WelcomeServlet</servlet-class>
+  </servlet>
+ 
+ 
+  
+ <context-param>
+ <param-name>Emails</param-name>
+ <param-value>www.gamil.com</param-value>
+ 
+ </context-param>
+  <servlet-mapping>
+  	<servlet-name>ServletConfiguration</servlet-name>
+  	<url-pattern>/config</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>WelcomeServlet</servlet-name>
+  	<url-pattern>/WelcomeServlet</url-pattern>
+  </servlet-mapping>
+  
+ 
+</web-app>
